@@ -1,0 +1,138 @@
+description: null
+tags:
+  _aml_system_azureml.automlComponent: AutoML
+  mlflow.source.type: JOB
+  mlflow.source.name: automl_driver.py
+  _aml_system_codegen: completed
+  _aml_system_automl_is_child_run_end_telemetry_event_logged: 'True'
+properties:
+  runTemplate: automl_child
+  pipeline_id: __AutoML_Ensemble__
+  pipeline_spec: >-
+    {"pipeline_id":"__AutoML_Ensemble__","objects":[{"module":"azureml.train.automl.ensemble","class_name":"Ensemble","spec_class":"sklearn","param_args":[],"param_kwargs":{"automl_settings":"{'task_type':'regression','primary_metric':'normalized_root_mean_squared_error','verbosity':20,'ensemble_iterations':3,'ensemble_download_models_timeout_sec':300,'is_timeseries':False,'subscription_id':'13bda146-5cdc-4ec9-b92b-3aa4b365042e','time_column_name':None,'grain_column_names':None}","ensemble_run_id":"mslearn-bike-automll_2","experiment_name":"mslearn-bike-rental","workspace_name":"Lab01DIO","subscription_id":"13bda146-5cdc-4ec9-b92b-3aa4b365042e","resource_group_name":"DIO-ML-Pratica"}}]}
+  training_percent: '100'
+  predicted_cost: null
+  iteration: '2'
+  _aml_system_scenario_identification: Remote.Child
+  _azureml.ComputeTargetType: amlctrain
+  _azureml.ClusterName: Serverless
+  ContentSnapshotId: 63491dc7-71b7-4650-adc7-8f074a4bddfc
+  ProcessInfoFile: azureml-logs/process_info.json
+  ProcessStatusFile: azureml-logs/process_status.json
+  run_preprocessor: ''
+  run_algorithm: VotingEnsemble
+  ensembled_iterations: '[0, 1]'
+  ensembled_algorithms: '[''LightGBM'', ''RandomForest'']'
+  ensembled_run_ids: '[''mslearn-bike-automll_0'', ''mslearn-bike-automll_1'']'
+  ensemble_weights: '[0.6666666666666666, 0.3333333333333333]'
+  best_individual_pipeline_score: '0.09357675586470318'
+  best_individual_iteration: '0'
+  model_output_path: outputs/model.pkl
+  conda_env_data_location: >-
+    aml://artifact/ExperimentRun/dcid.mslearn-bike-automll_2/outputs/conda_env_v_1_0_0.yml
+  model_data_location: aml://artifact/ExperimentRun/dcid.mslearn-bike-automll_2/outputs/model.pkl
+  model_size_on_disk: '266661'
+  scoring_data_location: >-
+    aml://artifact/ExperimentRun/dcid.mslearn-bike-automll_2/outputs/scoring_file_v_1_0_0.py
+  scoring_data_location_v2: >-
+    aml://artifact/ExperimentRun/dcid.mslearn-bike-automll_2/outputs/scoring_file_v_2_0_0.py
+  scoring_data_location_pbi: >-
+    aml://artifact/ExperimentRun/dcid.mslearn-bike-automll_2/outputs/scoring_file_pbi_v_1_0_0.py
+  model_exp_support: 'True'
+  pipeline_graph_version: 1.0.0
+  model_name: mslearnbikeauto2
+  score: '0.08929388746691977'
+  score_table: NaN
+  run_properties: >-
+    estimators=[('0', Pipeline(memory=None, steps=[('maxabsscaler',
+    MaxAbsScaler(copy=True
+  pipeline_script: >-
+    {"pipeline_id":"__AutoML_Ensemble__","objects":[{"module":"azureml.train.automl.ensemble","class_name":"Ensemble","spec_class":"sklearn","param_args":[],"param_kwargs":{"automl_settings":"{'task_type':'regression','primary_metric':'normalized_root_mean_squared_error','verbosity':20,'ensemble_iterations':3,'ensemble_download_models_timeout_sec':300,'is_timeseries':False,'subscription_id':'13bda146-5cdc-4ec9-b92b-3aa4b365042e','time_column_name':None,'grain_column_names':None}","ensemble_run_id":"mslearn-bike-automll_2","experiment_name":"mslearn-bike-rental","workspace_name":"Lab01DIO","subscription_id":"13bda146-5cdc-4ec9-b92b-3aa4b365042e","resource_group_name":"DIO-ML-Pratica"}}]}
+  training_type: train_valid
+  fit_time: '1'
+  goal: normalized_root_mean_squared_error_min
+  primary_metric: normalized_root_mean_squared_error
+  errors: '{}'
+  onnx_model_resource: '{}'
+  dependencies_versions: >-
+    {"azureml-dataprep-native": "38.0.0", "azureml-dataprep": "4.12.8",
+    "azureml-dataprep-rslex": "2.19.6", "azureml-mlflow": "1.54.0.post1",
+    "azureml-core": "1.54.0.post1", "azureml-train-automl-client":
+    "1.54.0.post1", "azureml-train-automl-runtime": "1.54.0.post1",
+    "azureml-dataset-runtime": "1.54.0.post1", "azureml-pipeline-core":
+    "1.54.0", "azureml-telemetry": "1.54.0", "azureml-responsibleai": "1.54.0",
+    "azureml-interpret": "1.54.0", "azureml-training-tabular": "1.54.0",
+    "azureml-automl-runtime": "1.54.0", "azureml-train-core": "1.54.0",
+    "azureml-train-restclients-hyperdrive": "1.54.0", "azureml-automl-core":
+    "1.54.0", "azureml-defaults": "1.54.0", "azureml-inference-server-http":
+    "0.8.4.2"}
+  num_cores: '4'
+  num_logical_cores: '4'
+  peak_memory_usage: '1110812'
+  vm_configuration: x86_64
+  core_hours: '0.0036349349999999997'
+  feature_skus: automatedml_sdk_guardrails
+  StartTimeUtc: '2024-03-08 18:34:17'
+  EndTimeUtc: '2024-03-08 18:34:53'
+displayName: amiable_river_zym521v6
+status: Completed
+experimentName: mslearn-bike-rental
+services:
+  Tracking:
+    jobServiceType: Tracking
+    port: null
+    endpoint: >-
+      azureml://eastus.api.azureml.ms/mlflow/v1.0/subscriptions/13bda146-5cdc-4ec9-b92b-3aa4b365042e/resourceGroups/DIO-ML-Pratica/providers/Microsoft.MachineLearningServices/workspaces/Lab01DIO?
+    status: null
+    errorMessage: null
+    properties: null
+    nodes: null
+  Studio:
+    jobServiceType: Studio
+    port: null
+    endpoint: >-
+      https://ml.azure.com/runs/mslearn-bike-automll_2?wsid=/subscriptions/13bda146-5cdc-4ec9-b92b-3aa4b365042e/resourcegroups/DIO-ML-Pratica/workspaces/Lab01DIO
+    status: null
+    errorMessage: null
+    properties: null
+    nodes: null
+computeId: >-
+  /subscriptions/13bda146-5cdc-4ec9-b92b-3aa4b365042e/resourceGroups/DIO-ML-Pratica/providers/Microsoft.MachineLearningServices/workspaces/Lab01DIO/computes/Serverless
+isArchived: false
+identity: null
+componentId: null
+notificationSetting: null
+secretsConfiguration: null
+jobType: Command
+resources:
+  instanceCount: 1
+  maxInstanceCount: 3
+  instanceType: Standard_DS3_v2
+  locations: null
+  properties: null
+  shmSize: 2g
+  dockerArgs: null
+codeId: >-
+  /subscriptions/13bda146-5cdc-4ec9-b92b-3aa4b365042e/resourceGroups/DIO-ML-Pratica/providers/Microsoft.MachineLearningServices/workspaces/Lab01DIO/codes/63491dc7-71b7-4650-adc7-8f074a4bddfc/versions/1
+command: python automl_driver.py
+environmentId: azureml://registries/azureml/environments/AzureML-AutoML/versions/156
+inputs: {}
+outputs:
+  default:
+    description: null
+    uri: >-
+      azureml://datastores/workspaceartifactstore/ExperimentRun/dcid.mslearn-bike-automll_2
+    assetName: null
+    assetVersion: null
+    mode: ReadWriteMount
+    autoDeleteSetting: null
+    jobOutputType: uri_folder
+distribution: null
+autologgerSettings: null
+limits:
+  timeout: null
+  jobLimitsType: Command
+environmentVariables:
+  AUTOML_SDK_RESOURCE_URL: https://aka.ms/automl-resources/
+parameters: {}
+queueSettings: null
